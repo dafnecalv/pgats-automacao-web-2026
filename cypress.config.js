@@ -15,7 +15,7 @@ module.exports = defineConfig({
     reportPageTitle: 'Relatório de Testes - PGATS Automation Exercise',
     embeddedScreenshots: true,
     inlineAssets: true,
-    autoOpen: true, // Abre o relatório em HTML automaticamente ao término dos testes
+    autoOpen: !process.env.CI, // Abre o relatório em HTML ao término dos testes, exceto na esteira de CI
     saveAllAttempts: false
   }
 });
